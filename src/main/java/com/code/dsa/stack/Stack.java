@@ -8,6 +8,7 @@ public class Stack<T> {
     private int capacity;
     private T[] arr;
 
+    @SuppressWarnings("unchecked")
     public Stack(Class<T> clazz, int capacity) {
         this.capacity = capacity;
         arr = (T[]) Array.newInstance(clazz, capacity);
