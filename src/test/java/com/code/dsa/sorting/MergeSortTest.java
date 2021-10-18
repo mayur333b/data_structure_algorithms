@@ -3,8 +3,6 @@ package com.code.dsa.sorting;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 public class MergeSortTest {
     MergeSort mergeSort = new MergeSort();
 
@@ -14,7 +12,7 @@ public class MergeSortTest {
         int[] output = {3, 9, 10, 27, 38, 43, 82};
 
         mergeSort.sort(input, 0, input.length - 1);
-        Assertions.assertEquals(Arrays.compare(input, output), 0);
+        Assertions.assertArrayEquals(input, output);
     }
 
     @Test
@@ -23,7 +21,7 @@ public class MergeSortTest {
         int[] output = {-43, -27, 3, 9, 10, 38, 82};
 
         mergeSort.sort(input, 0, input.length - 1);
-        Assertions.assertEquals(Arrays.compare(input, output), 0);
+        Assertions.assertArrayEquals(input, output);
     }
 
     @Test
@@ -32,7 +30,7 @@ public class MergeSortTest {
         int[] output = {};
 
         mergeSort.sort(input, 0, input.length - 1);
-        Assertions.assertEquals(Arrays.compare(input, output), 0);
+        Assertions.assertArrayEquals(input, output);
     }
 
     @Test
@@ -41,6 +39,6 @@ public class MergeSortTest {
         int[] output = {2};
 
         mergeSort.sort(input, 0, input.length - 1);
-        Assertions.assertEquals(Arrays.compare(input, output), 0);
+        Assertions.assertArrayEquals(input, output);
     }
 }
